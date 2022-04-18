@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: nodejs
-    container_name: nodejs
+    image: avinashchh/data-persistence
+    container_name: data-persistence
     restart: always
     
     ports:
