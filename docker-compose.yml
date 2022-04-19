@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: avinashchh/data-persistence
-    container_name: data-persistence
+    container_name: data-persistence-sample
     restart: always
     
     ports:
