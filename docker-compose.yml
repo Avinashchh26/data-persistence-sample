@@ -20,7 +20,7 @@ services:
 
   mongodb:
     image: mongo:4.1.8-xenial
-    container_name: db
+    container_name: mongodb
     restart: always
     
     volumes:     
