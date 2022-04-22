@@ -10,7 +10,7 @@ services:
     restart: always
     
     ports:
-      - "90:8080"
+      - 90:8080
     volumes:
       - .:/home/node/app
       - node_modules:/home/node/app/node_modules
@@ -19,12 +19,19 @@ services:
     
 
   mongodb:
-    image: mongo:4.1.8-xenial
+    image: mongo:latest
     container_name: mongodb
     restart: always
     
     volumes:     
       - dbdata:/data/db
+    environment:
+      Port:90
+      mongodb_URI= mongodb://mongo_db:27017
+      DB_NAME= my_db
+      NAME=Raja
+    depends_on:
+      -mongo_db
     networks:
       - app-network  
 
