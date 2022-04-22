@@ -30,8 +30,6 @@ services:
       mongodb_URI: mongodb://mongo_db:27017
       DB_NAME: my_db
       NAME: Raja
-    depends_on:
-      - mongo_db
     networks:
       - app-network  
 
