@@ -22,11 +22,12 @@ services:
     image: mongo:latest
     container_name: mongodb
     restart: always
-    
+    port:
+      - 3000:4000
     volumes:     
       - dbdata:/data/db
     environment:
-      Port: 3000
+      Port: 4000
       mongodb_URI: mongodb://mongo_db:27017
       DB_NAME: my_db
       NAME: Raja
