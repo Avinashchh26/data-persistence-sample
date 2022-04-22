@@ -19,7 +19,7 @@ services:
     
 
   mongo_db:
-    image: mongo: latest
+    image: mongo:latest
     container_name: mongodb
     restart: always
     
